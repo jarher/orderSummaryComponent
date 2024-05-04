@@ -1,0 +1,114 @@
+@font-face {
+  font-family: "Red-Hat-Display";
+  src: url("./fonts/RedHatDisplay-VariableFont_wght.ttf");
+}
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  --size: 16px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--Pale-blue) url("./images/pattern-background-mobile.svg")
+    no-repeat top left / cover;
+  font-family: "Red-Hat-Display";
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.card {
+  background-color: white;
+  color: var(--Desaturated-blue);
+  display: grid;
+  row-gap: 1.7rem;
+  width: 87%;
+  margin: 4.375rem auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  box-shadow: 0px 25px 35px -10px rgba(114, 128, 167, 0.2),
+    0px 20px 35px -27px rgba(114, 128, 167, 0.2);
+}
+figure {
+  overflow: hidden;
+}
+.card-body {
+  display: grid;
+  row-gap: 1.4rem;
+  padding: 0 1.4rem;
+  text-align: center;
+}
+.card-main-content h1 {
+  color: var(--Dark-blue);
+  font-size: 1.4rem;
+  font-weight: 900;
+}
+.card-main-content p {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 1rem;
+  line-height: 1.6rem;
+  padding: 0 0.6rem;
+}
+.card-properties {
+  background-color: var(--Very-pale-blue);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  font-size: 0.9rem;
+  align-items: center;
+  padding: 1rem 0.8rem;
+  border-radius: 0.5rem;
+}
+.card-properties img {
+  height: 3rem;
+  width: 3rem;
+}
+.card-properties div {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 0.2rem;
+  text-align: left;
+}
+.card-properties div span:nth-child(1) b {
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+.card-properties div span:nth-child(2) {
+}
+a {
+  color: var(--Bright-blue);
+  font-weight: 700;
+  cursor: pointer;
+}
+.card-buttons-container {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  row-gap: 0.4rem;
+}
+button {
+  border: none;
+  outline: none;
+  color: var(--Desaturated-blue);
+  height: 2.6rem;
+  background-color: transparent;
+  border-radius: 0.7rem;
+  font-weight: 900;
+  font-size: 0.9rem;
+  letter-spacing: 0.02rem;
+}
+.button-primary {
+  background-color: var(--Bright-blue);
+  box-shadow: 0 15px 15px 0px hsla(245, 75%, 52%, 0.185);
+  color: var(--Very-pale-blue);
+  padding: 1.6rem 0;
+  line-height: 0.1rem;
+  font-weight: 700;
+}
